@@ -32,3 +32,9 @@
   opacity: 0.8;
   background-color: #1d1d1d;
 }
+
+@media screen and (max-width: 660px){
+  .modal-product-view-container{
+    width: 95%;
+  }
+}
