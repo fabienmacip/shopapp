@@ -1,0 +1,14 @@
+.footer-content{
+  background-color: rgb(6, 240, 150);
+  height: calc(100vh - 70vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.footer-bottom{
+  background-color: rgb(1,43,1);
+  height: 70px;
+}

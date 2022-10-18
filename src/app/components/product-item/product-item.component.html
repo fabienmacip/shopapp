@@ -1,0 +1,16 @@
+<div class="product-item" (click)="handleClickProduct(product)">
+  <div class="product-image">
+    <img [src]="product ? product.imageUrl[0] : ''"
+         [alt]="product ? product.name : ''"
+    >
+  </div>
+  <div class="product-details">
+    <div class="product-name">
+      <h2>{{ product?.name?.substring(0,40) }}{{ product && product.name[41] ? "..." : null }}</h2>
+    </div>
+    <div class="product-price">
+      <h3>€ {{ (product?.sold_price || 0)/100 }}</h3>
+      <del><h3>€ {{ (product?.regular_price || 0)/100 }}</h3></del>
+    </div>
+  </div>
+</div>
