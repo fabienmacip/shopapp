@@ -215,8 +215,8 @@ modalProduct: Product| undefined;
   }
 
   closeModal(){
-    console.log("close modal")
     this.isDisplayModal = false;
+    this.modalProduct = undefined;
   }
 
 }
