@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -7,25 +8,44 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnDestroy
+{
 
-products: Product[] = [];
+  products: Product[] = [];
 
-isDisplayModal: boolean = false;
-modalProduct: Product| undefined;
+  isDisplayModal: boolean = false;
+  modalProduct: Product| undefined;
+  productsSub: Subscription | undefined;
 
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
     //this.products = this.productService.getProducts();
-    this.productService.getProducts()
-    .then((products: Product[]) => {
+    this.productsSub = this.productService.getProducts()
+    .subscribe({
+      next: (products: Product[])=>{
+        this.products = products
+      },
+      error: (error: any)=>{
+        console.log("Erreur : ", error)
+      },
+      complete: ()=>{
+        console.log("product-list.ts -> Product list init completed")
+      },
+    })
+
+
+    /*     .then((products: Product[]) => {
       this.products = products
     })
     .catch((error) => {
       this.products = []
-    })
+    }) */
+  }
+
+  ngOnDestroy(): void {
+      this.productsSub?.unsubscribe();
   }
 
   handleDisplayProductViewModal(product: Product){
@@ -44,5 +64,6 @@ modalProduct: Product| undefined;
     this.isDisplayModal = false;
     this.modalProduct = undefined;
   }
+
 
 }

@@ -1,5 +1,10 @@
-import { Injectable, resolveForwardRef } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { interval, Observable, of } from 'rxjs';
 import { Product } from '../models/product';
+
+import { HttpClient } from '@angular/common/http';
+
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +12,12 @@ import { Product } from '../models/product';
 
 export class ProductService {
 
-  private products: Product[] = [
+  private products: Product[] = []
+
+  //private urlApi: string = "http://localhost:4200/assets/api/products.json"
+  private urlApi: string = environment.serverUrl
+
+/*   = [
     {
       _id: '1255452',
       name: 'Robe à imprimé floral à nœud découpe',
@@ -189,10 +199,13 @@ export class ProductService {
       created_at: new Date()
     }
   ]
+*/
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getProducts(): Promise<Product[]>{
+/*   getProducts(): Promise<Product[]>{
     return new Promise((resolve, reject) => {
       if(this.products.length){
         resolve(this.products)
@@ -200,6 +213,18 @@ export class ProductService {
         reject([])
       }
     })
+  } */
+
+  getProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(this.urlApi)
+  }
+
+  getNumber(): Observable<Number>{
+    return of(45)
+  }
+
+  getSecond(): Observable<Number>{
+    return interval(500)
   }
 
   addProduct(product: Product){
