@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.secondSub = this.productService.getSecond()
+    /* this.secondSub = this.productService.getSecond()
     .subscribe({
       next: (value: Number)=>{
         this.data = value
@@ -32,11 +32,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         console.log("Complete")
       }
     }
-    )
+    ) */
   }
 
   ngOnDestroy(): void {
-    this.secondSub?.unsubscribe()
+    //this.secondSub?.unsubscribe()
   }
 
 }

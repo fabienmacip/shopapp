@@ -11,6 +11,9 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,14 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     ProductListComponent,
     ProductItemComponent,
-    ModalProductViewComponent
+    ModalProductViewComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
