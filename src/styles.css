@@ -45,3 +45,65 @@ body{
 .gap-10{
   gap: 10px;
 }
+
+.wrap{
+  flex-wrap: wrap;
+}
+
+/* ******************* SIGNIN SIGNUP ******************* */
+.signup, .signin
+{
+  height: 70vh;
+}
+
+
+.btn
+{
+  font-size: 1.4rem;
+  height: 40px;
+  background-color: #1d1d1d;
+  border: none;
+  min-width: 100px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-container
+{
+  width: 500px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border: 0.1px solid #ccc;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+form
+{
+  padding: 5px;
+  background-color: white;
+}
+
+form .form-line
+{
+  min-height: 40px;
+  padding: 10px 0;
+}
+
+form .form-line input
+{
+  font-size: 1.1rem;
+  height: 40px;
+}
+
+@media screen and (max-width: 550px){
+  .form-container
+  {
+    width: 90%;
+  }
+}

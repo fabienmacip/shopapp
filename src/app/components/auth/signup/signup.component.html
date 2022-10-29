@@ -2,31 +2,51 @@
   <div class="form-container">
     <form action="">
       <h2>Inscription</h2>
-      <div class="form-line flex gap-10">
+      <div class="form-line flex gap-10 wrap">
         <input
           type="text"
           name="firstname"
           placeholder="Your first name..."
           class="flex-1"
+          [(ngModel)]="user.firstname"
         >
         <input
           type="text"
           name="lastname"
           placeholder="Your last name..."
           class="flex-1"
+          [(ngModel)]="user.lastname"
         >
       </div>
       <div class="form-line flex">
-        <input class="flex-1" type="email" name="email" placeholder="Your email...">
+        <input
+          class="flex-1"
+          type="email"
+          name="email"
+          placeholder="Your email..."
+          [(ngModel)]="user.email"
+        >
       </div>
       <div class="form-line flex">
-        <input class="flex-1" type="password" name="password" placeholder="Your password...">
+        <input
+          class="flex-1"
+          type="password"
+          name="password"
+          placeholder="Your password..."
+          [(ngModel)]="user.password"
+        >
       </div>
       <div class="form-line flex">
-        <input class="flex-1" type="password" name="passwordConfirm" placeholder="Confirm your password...">
+        <input
+          class="flex-1"
+          type="password"
+          name="passwordConfirm"
+          placeholder="Confirm your password..."
+          [(ngModel)]="user.passwordConfirm"
+        >
       </div>
       <div class="button flex">
-        <button class="btn flex-1">S'inscrire</button>
+        <button class="btn flex-1" (click)="handleSubmit()">S'inscrire</button>
       </div>
     </form>
   </div>

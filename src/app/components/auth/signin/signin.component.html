@@ -1,1 +1,28 @@
-<p>signin works!</p>
+<div class="signin">
+  <div class="form-container">
+    <form action="">
+      <h2>Connexion</h2>
+      <div class="form-line flex">
+        <input
+          class="flex-1"
+          type="email"
+          name="email"
+          placeholder="Your email..."
+          [(ngModel)]="user.email"
+        >
+      </div>
+      <div class="form-line flex">
+        <input
+          class="flex-1"
+          type="password"
+          name="password"
+          placeholder="Your password..."
+          [(ngModel)]="user.password"
+        >
+      </div>
+      <div class="button flex">
+        <button class="btn flex-1" (click)="handleSubmit()">Se connecter</button>
+      </div>
+    </form>
+  </div>
+</div>

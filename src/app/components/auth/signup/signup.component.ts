@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-signup',
@@ -7,34 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  firstname: string = "OI"
-  firstnames: string[] = ['Lionel', 'Antoine', 'Julie', 'Oscar']
-
+  user: User = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    passwordConfirm: ""
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  handleSubmit(): void{
+    console.log(this.user)
+  }
+
   addFirstname(): void{
-    if(this.firstname){
+    /* if(this.firstname){
       this.firstnames.push(this.firstname)
       this.firstname = ""
-    }
+    } */
   }
 
   updateFirstName(index: number){
-    if(index >= 0){
+    /* if(index >= 0){
       const name = this.firstnames[index];
       this.firstnames.splice(index, 1);
       this.firstname = name;
-    }
+    } */
   }
 
   deleteFirstName(index: number): void{
-    if(index >= 0){
+    /* if(index >= 0){
       this.firstnames.splice(index, 1)
-    }
+    } */
   }
 
 }
