@@ -1,6 +1,6 @@
 <div class="signin">
   <div class="form-container">
-    <form action="">
+    <form action="" [formGroup]="signInForm">
       <h2>Connexion</h2>
       <div class="form-line flex">
         <input
@@ -8,8 +8,16 @@
           type="email"
           name="email"
           placeholder="Your email..."
-          [(ngModel)]="user.email"
+          [formControl]="email"
         >
+      </div>
+      <div class="error" *ngIf="email.dirty && !email.valid" >
+        <p *ngIf="email.hasError('required')">
+          Email obligatoire
+        </p>
+        <p *ngIf="!email.hasError('required')">
+          L'email n'est pas au bon format
+        </p>
       </div>
       <div class="form-line flex">
         <input
@@ -17,11 +25,23 @@
           type="password"
           name="password"
           placeholder="Your password..."
-          [(ngModel)]="user.password"
+          [formControl]="password"
         >
       </div>
+      <div class="error" *ngIf="password.dirty && !password.valid" >
+        <p *ngIf="password.hasError('minlength')">
+          Le mot de passe doit contenir au moins 6 caractères
+        </p>
+        <p *ngIf="password.hasError('required')">
+          Mot de passe obligatoire
+        </p>
+      </div>
       <div class="button flex">
-        <button class="btn flex-1" (click)="handleSubmit()">Se connecter</button>
+        <button
+          class="btn flex-1"
+          (click)="handleSubmit()"
+          [disabled]="!this.signInForm.valid"
+          >Se connecter</button>
       </div>
     </form>
   </div>
