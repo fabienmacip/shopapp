@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   slug: string | undefined
   product: Product | undefined
   productSub: Subscription | undefined
+  isLoading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,9 +28,11 @@ export class ProductComponent implements OnInit, OnDestroy {
     .subscribe({
       next: (products: Product[]) => {
         this.product = products.filter(p => p.slug === this.slug)[0]
+        this.isLoading = false
       },
       error: (error: any)=> {
         console.log("Erreur : ", error)
+        this.isLoading = true
       }
     })
   }

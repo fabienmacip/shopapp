@@ -1,4 +1,5 @@
-<div class="single-product flex gap-10 content">
+<app-loading *ngIf="isLoading"></app-loading>
+<div *ngIf="!isLoading" class="single-product flex gap-10 content">
   <div class="single-product-image flex flex-1">
     <img
       [src]="product ? product.imageUrl[0] : ''" [alt]="product?.name"
