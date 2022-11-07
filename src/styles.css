@@ -4,6 +4,10 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.b{
+  border: 0.1px solid black;
+}
+
 .flex{
   display: flex;
 }
@@ -46,6 +50,24 @@ body{
   gap: 10px;
 }
 
+.content{
+  width: 80%;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .content{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content{
+    width: 95%;
+  }
+}
+
 .wrap{
   flex-wrap: wrap;
 }
@@ -55,7 +77,6 @@ body{
 {
   height: 70vh;
 }
-
 
 .btn
 {
@@ -107,3 +128,5 @@ form .form-line input
     width: 90%;
   }
 }
+
+/*************** SINGLE PRODUCT ***************/
