@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl: "http://localhost:4200/assets/api/products.json",
+  serverUrl: "http://localhost:4200/assets/api/productsAll.json",
   siteName: "Shop App",
   siteEmail: "fabien.macip+shopapp@gmail.com"
 };
