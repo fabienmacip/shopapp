@@ -1,5 +1,5 @@
 .footer-content{
-  background-color: rgb(6, 240, 150);
+  background-color: #3f51b5;
   height: calc(100vh - 70vh - 80px);
   display: flex;
   justify-content: center;
