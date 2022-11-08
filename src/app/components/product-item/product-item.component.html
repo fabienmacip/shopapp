@@ -1,5 +1,5 @@
 <div class="product-item">
-  <div class="product-image">
+  <div class="product-image" [routerLink]="['product', product?.slug]">
     <img [src]="product ? product.imageUrl[0] : ''"
           [alt]="product ? product.name : ''"
     >
@@ -14,9 +14,6 @@
     </div>
     <div class="product-action-button flex gap-5 jcc">
       <button class="btn" (click)="handleClickProduct(product)">Quick View</button>
-      <button class="btn" [routerLink]="['product', product?.slug]">
-        All details
-      </button>
     </div>
   </div>
 </div>

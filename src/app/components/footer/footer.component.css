@@ -1,6 +1,6 @@
 .footer-content{
   background-color: #3f51b5;
-  height: calc(100vh - 70vh - 80px);
+  min-height: calc(100vh - 70vh - 80px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +9,6 @@
 }
 
 .footer-bottom{
-  background-color: rgb(1,43,1);
+  background-color: #091c8a;
   height: 70px;
 }
