@@ -14,7 +14,7 @@ body{
   border: 0.1px solid black;
 }
 
-.flex{
+.flex, .row{
   display: flex;
 }
 

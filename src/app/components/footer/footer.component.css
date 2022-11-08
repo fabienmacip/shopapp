@@ -1,14 +1,34 @@
+footer .logo{
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
 .footer-content{
   background-color: #3f51b5;
-  min-height: calc(100vh - 70vh - 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-  font-size: 2rem;
+}
+
+footer .content{
+  min-height: calc(100vh - 70vh - 80px);
 }
 
 .footer-bottom{
   background-color: #091c8a;
   height: 70px;
+}
+
+.footer-widget{
+  min-width: 200px;
+  padding: 10px 0;
+}
+
+.footer-list{
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list a{
+  text-decoration: none;
+  color: white;
 }
