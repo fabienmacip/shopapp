@@ -1,7 +1,8 @@
 <div class="signin">
   <div class="form-container">
     <form action="" [formGroup]="signInForm">
-      <h2>Connexion</h2>
+      <h2>Sign In (Connexion)</h2>
+      <p class="tc">Don't have an account ? if yes then click here to <a routerLink="/signup">register</a></p>
       <div class="form-line flex">
         <input
           class="flex-1"
@@ -41,7 +42,7 @@
           class="btn flex-1"
           (click)="handleSubmit()"
           [disabled]="!this.signInForm.valid"
-          >Se connecter</button>
+          >Sign In</button>
       </div>
     </form>
   </div>
