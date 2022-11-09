@@ -11,14 +11,17 @@
       <h2>{{ product?.name }}</h2>
       <div class="modal-product-view-details-price">
         <del>
-          <h4>€ {{ (product?.sold_price || 0)/100 }}</h4>
+          <h4>{{ (product?.sold_price || 0)/100 | currency: "EUR" }}</h4>
         </del>
-        <h4>€ {{ (product?.regular_price || 0)/100 }}</h4>
+        <h4>{{ (product?.regular_price || 0)/100 | currency: "EUR" }}</h4>
       </div>
       <div class="modal-product-view-details-created-at">
         Créé le {{ product?.created_at | date:"dd/MM/YYYY" }}
       </div>
-      <button class="btn btn-close" (click)="handleCloseModalButton()">Fermer</button>
+      <div class="modal-product-view-details-button flex">
+        <button class="btn btn-close flex-1" (click)="handleCloseModalButton()">Fermer</button>
+      </div>
+
     </div>
   </div>
 </div>
