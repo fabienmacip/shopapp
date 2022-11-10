@@ -1,25 +1,37 @@
 <app-loading *ngIf="isLoading"></app-loading>
 <div *ngIf="!isLoading" class="single-product flex gap-10 content">
-  <div class="single-product-image flex flex-1">
-    <img
-      [src]="product ? product.imageUrl[0] : ''" [alt]="product?.name"
-    >
+  <div class="single-product-image flex gap-10 flex-1">
+    <div class="single-product-image-list flex column gap-10">
+      <img
+        *ngFor="let url of product?.imageUrl"
+        width="100"
+        [src]="url" [alt]="product?.name"
+        (click) = "handleChangeCurrentImage(url)"
+        (mouseover) = "handleChangeCurrentImage(url)"
+        [ngClass]="{current: currentImage == url}"
+      >
+    </div>
+    <div class="single-product-image-current flex-3">
+      <img
+        [src]="currentImage" [alt]="product?.name"
+      >
+    </div>
   </div>
   <div class="single-product-details flex-1">
     <h2>{{ product?.name }}</h2>
-    <div class="single-product-details-price">
+    <div class="single-product-details-price flex aic gap-10">
       <del>
         <h4>{{ (product?.sold_price || 0)/100 | currency:"EUR"}}</h4>
       </del>
       <h4>{{ (product?.regular_price || 0)/100 | currency:"EUR"}}</h4>
     </div>
-    <div class="single-product-details-created-at">
-      Créé le {{ product?.created_at | date:"dd/MM/YYYY" }}
-    </div>
     <div class="product-action-button flex">
-      <button class="btn">
+      <button class="btn btn-main flex-1">
         Pay now
       </button>
+    </div>
+    <div class="single-product-details-created-at tc">
+      Créé le {{ product?.created_at | date:"dd/MM/YYYY" }}
     </div>
   </div>
 </div>
