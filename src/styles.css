@@ -97,6 +97,44 @@ form p
   margin: 0;
 }
 
+table
+{
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+table th,
+table td
+{
+  border: 1px solid #ccc;
+}
+
+table td
+{
+  padding: 0 10px;
+}
+
+.vendor-name h6
+{
+  font-size: 1.5rem;
+}
+
+.vendor-name h6 a
+{
+  text-decoration: none;
+  color: #3f51b5;
+}
+
+.thumb img
+{
+  width: 80px;
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+}
+
 @media screen and (max-width: 1200px) {
   .content{
     width: 90%;

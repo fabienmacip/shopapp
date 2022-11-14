@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-product-additional-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-additional-info.component.css']
 })
 export class ProductAdditionalInfoComponent implements OnInit {
+
+  product: Product | undefined
 
   constructor() { }
 

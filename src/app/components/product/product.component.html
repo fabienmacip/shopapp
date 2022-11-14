@@ -41,4 +41,4 @@
   </div>
 </div>
 
-<app-product-details></app-product-details>
+<app-product-details *ngIf="!isLoading" [product]="product"></app-product-details>

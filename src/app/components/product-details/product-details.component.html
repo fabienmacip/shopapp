@@ -9,7 +9,7 @@
   </div>
 
   <div class="product-details-infos">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="handleChangeDetails($event)"></router-outlet>
   </div>
 
 </div>
