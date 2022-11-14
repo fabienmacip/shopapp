@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routing';
 import { LoadingComponent } from './loading/loading.component';
+import { PaymentCardComponent } from './payment-card/payment-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { LoadingComponent } from './loading/loading.component';
     ModalProductViewComponent,
     SigninComponent,
     SignupComponent,
-    LoadingComponent
+    LoadingComponent,
+    PaymentCardComponent
   ],
   imports: [
     BrowserModule,
