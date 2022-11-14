@@ -2,6 +2,7 @@
 {
   text-decoration: none;
   color: inherit;
+  border: 0.1px solid #1d1d1d;
 }
 
 .single-product-details-container
@@ -16,8 +17,19 @@
   -o-border-radius: 10px;
 }
 
-.product-details-title ul li
+.product-details-title ul li a
 {
   background-color: #ccc;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+
+.product-details-title ul li a.active
+{
+  background-color: #3f51b5;
+  color: white;
 }

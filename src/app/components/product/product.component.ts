@@ -30,6 +30,9 @@ export class ProductComponent implements OnInit, OnDestroy {
       next: (products: Product[]) => {
         this.product = products.filter(p => p.slug === this.slug)[0]
         this.currentImage = this.product.imageUrl[0]
+
+        console.log(this.product);
+
         this.isLoading = false
       },
       error: (error: any)=> {
