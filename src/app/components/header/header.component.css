@@ -21,6 +21,10 @@ header{
   text-transform: uppercase;
 }
 
+.bars img{
+  width: 50px;
+}
+
 header .nav-bar ul{
   display: flex;
   gap: 20px;
@@ -39,7 +43,8 @@ header a{
     display: none;
   }
 
-  header{
-    justify-content: center;
+  header .bars{
+    display: block;
   }
+
 }

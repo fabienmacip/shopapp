@@ -23,6 +23,7 @@ import { ProductDescriptionComponent } from './components/product-tabs/product-d
 import { ProductAdditionalInfoComponent } from './components/product-tabs/product-additional-info/product-additional-info.component';
 import { ProductVendorComponent } from './components/product-tabs/product-vendor/product-vendor.component';
 import { ProductReviewsComponent } from './components/product-tabs/product-reviews/product-reviews.component';
+import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { ProductReviewsComponent } from './components/product-tabs/product-revie
     ProductDescriptionComponent,
     ProductAdditionalInfoComponent,
     ProductVendorComponent,
-    ProductReviewsComponent
+    ProductReviewsComponent,
+    AsideNavComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,10 @@ body{
   font-weight: 400;
 }
 
+.none{
+  display: none;
+}
+
 .b{
   border: 0.1px solid black;
 }
