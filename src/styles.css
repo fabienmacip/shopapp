@@ -71,6 +71,11 @@ body{
   min-height: 70vh;
 }
 
+.unlisted{
+  list-style: none;
+  padding: 0;
+}
+
 button:disabled
 {
   cursor: not-allowed;
