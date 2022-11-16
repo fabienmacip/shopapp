@@ -1,8 +1,11 @@
 <header>
-  <div class="bars none">
-    <a routerLink="">
+  <div class="bars none"
+    (click)="handleDisplayMobileNav()"
+    (mouseenter)="handleDisplayMobileNav()"
+  >
+
       <img src="/assets/images/icons/bars.png" alt="menu">
-    </a>
+
   </div>
   <div class="logo">
     <a routerLink="">{{ siteName }}</a>
@@ -19,4 +22,7 @@
   </div>
 </header>
 
-<app-aside-nav></app-aside-nav>
+<app-aside-nav
+  (close)="handleCloseMobileNav()"
+  *ngIf="isDisplayedMobileNav"
+></app-aside-nav>

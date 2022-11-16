@@ -10,6 +10,10 @@ body{
   font-weight: 400;
 }
 
+del{
+  color: #3f51b5;
+}
+
 .none{
   display: none;
 }

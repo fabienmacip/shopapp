@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   navs_data: Item[] = nav_items
   auths_data: Item[] = auth_items
 
+  isDisplayedMobileNav: boolean = false;
+
   constructor(
     private productService: ProductService
   ) { }
@@ -41,6 +43,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     //this.secondSub?.unsubscribe()
+  }
+
+  handleDisplayMobileNav(){
+    this.isDisplayedMobileNav = !this.isDisplayedMobileNav;
+    console.log(this.isDisplayedMobileNav)
+  }
+
+  handleCloseMobileNav():void{
+    this.isDisplayedMobileNav = false;
   }
 
 }

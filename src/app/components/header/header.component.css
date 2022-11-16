@@ -23,6 +23,17 @@ header{
 
 .bars img{
   width: 50px;
+  cursor: pointer;
+}
+
+.bars img:hover{
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 header .nav-bar ul{
