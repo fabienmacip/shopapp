@@ -24,6 +24,7 @@ import { ProductAdditionalInfoComponent } from './components/product-tabs/produc
 import { ProductVendorComponent } from './components/product-tabs/product-vendor/product-vendor.component';
 import { ProductReviewsComponent } from './components/product-tabs/product-reviews/product-reviews.component';
 import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
+import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
     ProductAdditionalInfoComponent,
     ProductVendorComponent,
     ProductReviewsComponent,
-    AsideNavComponent
+    AsideNavComponent,
+    HomeSliderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,73 @@
+{
+    "isSuccess": true,
+    "statusCode": 200,
+    "length": 8,
+    "results": [
+        {
+            "_id": "271764468877894",
+            "name": "Culottes",
+            "created_at": "2016-01-21T18:38:08.337Z",
+            "updated_at": "2016-08-19T03:00:26.365Z",
+            "slug": "culottes",
+            "author": "Espero A."
+        },
+        {
+            "_id": "467057493089669",
+            "name": "Jupes",
+            "created_at": "2014-10-29T12:24:59.244Z",
+            "updated_at": "2017-11-21T11:51:12.838Z",
+            "slug": "jupes",
+            "author": "Espero A."
+        },
+        {
+            "_id": "4056361879215565",
+            "name": "Pantalons",
+            "created_at": "2016-07-20T05:53:38.764Z",
+            "updated_at": "2018-01-13T16:34:58.631Z",
+            "slug": "pantalons",
+            "author": "Espero A."
+        },
+        {
+            "_id": "719492979691098",
+            "name": "Robes",
+            "created_at": "2019-09-30T16:34:18.951Z",
+            "updated_at": "2020-12-18T02:57:27.698Z",
+            "slug": "robes",
+            "author": "Espero A."
+        },
+        {
+            "_id": "292731547262312",
+            "name": "Pulls",
+            "created_at": "2021-11-29T00:02:25.767Z",
+            "updated_at": "2021-12-15T05:18:42.454Z",
+            "slug": "pulls",
+            "author": "Espero A."
+        },
+        {
+            "_id": "4114885618688869",
+            "name": "Shorts",
+            "created_at": "2020-05-14T19:00:24.304Z",
+            "updated_at": "2021-11-06T23:14:09.423Z",
+            "slug": "shorts",
+            "author": "Espero A."
+        },
+        {
+            "_id": "4481528941560570",
+            "name": "T-Shirts",
+            "path": "/t-shirts",
+            "created_at": "2020-12-29T14:08:47.572Z",
+            "updated_at": "2021-05-03T10:06:37.721Z",
+            "slug": "t-shirts",
+            "author": "Espero A."
+        },
+        {
+            "_id": "2569954246953739",
+            "name": "Femmes",
+            "path": "/femmes",
+            "created_at": "2018-11-06T07:06:54.419Z",
+            "updated_at": "2019-11-20T20:21:55.510Z",
+            "slug": "femmes",
+            "author": "Espero A."
+        }
+    ]
+}
