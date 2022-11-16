@@ -1,1 +1,10 @@
-<p>aside-nav works!</p>
+<div class="aside-nav mobile-nav">
+  <ul class="unlisted">
+    <li *ngFor="let item of navs_data">
+      <a [routerLink]="item.path">{{ item.name}}</a>
+    </li>
+    <li *ngFor="let item2 of auths_data">
+      <a [routerLink]="item2.path">{{ item2.name }}</a>
+    </li>
+  </ul>
+</div>
