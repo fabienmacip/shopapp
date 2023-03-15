@@ -15,7 +15,7 @@ export class ProductService {
   private products: Product[] = []
 
   //private urlApi: string = "http://localhost:4200/assets/api/products.json"
-  private urlApi: string = environment.serverUrl
+  private urlApi: string = environment.serverUrl.products
 
 /*   = [
     {

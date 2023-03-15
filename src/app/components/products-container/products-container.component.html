@@ -3,10 +3,7 @@
 <div class="products-container flex content">
   <div class="products-category">
     <ul class="unlisted">
-      <li><a href="">Category</a></li>
-      <li><a href="" class="active">Category</a></li>
-      <li><a href="">Category</a></li>
-      <li><a href="">Category</a></li>
+      <li *ngFor="let category of categories?.results"><a href="">{{category.name}}</a></li>
     </ul>
   </div>
   <div class="products-list flex-1 b">
