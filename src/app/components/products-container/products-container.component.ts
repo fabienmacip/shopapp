@@ -27,6 +27,10 @@ export class ProductsContainerComponent implements OnInit, OnDestroy {
     })
   }
 
+  handleClick(event: any, category: Category){
+    event.preventDefault()
+  }
+
   ngOnDestroy(): void {
       this.categoriesSub?.unsubscribe()
   }

@@ -3,7 +3,11 @@
 <div class="products-container flex content">
   <div class="products-category">
     <ul class="unlisted">
-      <li *ngFor="let category of categories?.results"><a href="">{{category.name}}</a></li>
+      <li *ngFor="let category of categories?.results">
+        <a href="#"
+          (click)="handleClick($event, category)"
+        >{{category.name}}</a>
+      </li>
     </ul>
   </div>
   <div class="products-list flex-1 b">
