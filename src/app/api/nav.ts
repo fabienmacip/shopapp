@@ -7,7 +7,7 @@ export const nav_items: Item[] = [
   },
   {
     name: "Products",
-    path: ""
+    path: "/products"
   },
   {
     name: "Blog",

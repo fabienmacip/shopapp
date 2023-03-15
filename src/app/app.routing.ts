@@ -7,6 +7,7 @@ import { ProductDescriptionComponent } from "./components/product-tabs/product-d
 import { ProductReviewsComponent } from "./components/product-tabs/product-reviews/product-reviews.component";
 import { ProductVendorComponent } from "./components/product-tabs/product-vendor/product-vendor.component";
 import { ProductComponent } from "./components/product/product.component";
+import { ProductsContainerComponent } from "./components/products-container/products-container.component";
 
 export const ROUTES : Routes = [
   {
@@ -41,6 +42,11 @@ export const ROUTES : Routes = [
         component: ProductReviewsComponent
       }
     ]
+  },
+  {
+    path: 'products',
+    component: ProductsContainerComponent,
+    pathMatch: 'full'
   },
   {
     path: 'signin',
