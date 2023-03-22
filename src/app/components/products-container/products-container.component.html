@@ -1,6 +1,6 @@
 <app-page-title title="Products"></app-page-title>
 
-<div class="products-container flex content">
+<div class="products-container flex content p-10">
   <div class="products-category">
     <ul class="unlisted">
       <li *ngFor="let category of categories?.results">
@@ -10,7 +10,10 @@
       </li>
     </ul>
   </div>
-  <div class="products-list flex-1 b">
-    Product List
+  <div class="products-list flex-1 flex wrap gap-10 jcc p-10">
+    <app-product-item
+    *ngFor="let product of products"
+    [product]="product">
+  </app-product-item>
   </div>
 </div>
