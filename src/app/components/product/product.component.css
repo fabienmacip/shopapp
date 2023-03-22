@@ -2,6 +2,7 @@
 {
   margin-bottom: 20px;
   margin-top: 20px;
+  height: 600px;
 }
 
 .single-product .btn
@@ -53,6 +54,10 @@
 .single-product-image-list img
 {
   width: 100px;
+}
+
+.single-product-image-list{
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 900px) {

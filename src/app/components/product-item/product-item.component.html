@@ -1,5 +1,5 @@
 <div class="product-item">
-  <div class="product-image" [routerLink]="['product', product?.slug]">
+  <div class="product-image" [routerLink]="['/product', product?.slug]">
     <img [src]="product ? product.imageUrl[0] : ''"
           [alt]="product ? product.name : ''"
     >

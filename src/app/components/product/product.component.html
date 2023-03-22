@@ -5,6 +5,7 @@
       <img
         *ngFor="let url of product?.imageUrl"
         [src]="url" [alt]="product?.name"
+        class="flex-1"
         (click) = "handleChangeCurrentImage(url)"
         (mouseover) = "handleChangeCurrentImage(url)"
         [ngClass]="{current: currentImage == url}"

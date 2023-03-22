@@ -1,9 +1,13 @@
 .products-container{
   min-height: 70vh;
+  padding-top: 50px;
 }
 
 .products-category{
-  min-width: 300px;
+  min-width: 200px;
+  text-align: center;
+  position: fixed;
+  left: 10px;
 }
 
 .products-container ul li a{

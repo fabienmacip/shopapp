@@ -14,9 +14,11 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsContainerComponent implements OnInit, OnDestroy {
 
   categories: ResultRequest<Category> | undefined
+  currentCategory: Category | undefined
   categoriesSub: Subscription | undefined
   productSub: Subscription | undefined
-  products: Product[] | undefined
+  products: Product[] = []
+  isLoading: boolean = true
 
   constructor(
       private categoriesService: CategoriesService,
@@ -27,13 +29,21 @@ export class ProductsContainerComponent implements OnInit, OnDestroy {
     this.categoriesSub = this.categoriesService.getCategories()
     .subscribe({
       next: (value: ResultRequest<Category>) => {
-        this.categories = value
+        if(value.isSuccess){
+          this.categories = value
+          this.handleClick(null, this.categories.results[2])
+        }
       }
     })
   }
 
   handleClick(event: any, category: Category){
-    event.preventDefault()
+    this.currentCategory = category
+    window.scrollTo(0,0)
+    if(event){
+      event.preventDefault()
+    }
+    //this.isLoading = true
     this.productSub = this.productService.getProducts()
     .subscribe({
       next: (restultData: ResultRequest<Product>) => {
@@ -47,7 +57,7 @@ export class ProductsContainerComponent implements OnInit, OnDestroy {
             }
             return false
           })
-
+          this.isLoading = false
       }}
     })
   }
