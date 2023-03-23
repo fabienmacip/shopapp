@@ -27,6 +27,7 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
+import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { PageTitleComponent } from './components/page-title/page-title.component
     AsideNavComponent,
     HomeSliderComponent,
     ProductsContainerComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

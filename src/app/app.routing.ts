@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 import { SigninComponent } from "./components/auth/signin/signin.component";
 import { SignupComponent } from "./components/auth/signup/signup.component";
+import { ContactComponent } from "./components/contact/contact.component";
 import { ContainerComponent } from "./components/container/container.component";
 import { ProductAdditionalInfoComponent } from "./components/product-tabs/product-additional-info/product-additional-info.component";
 import { ProductDescriptionComponent } from "./components/product-tabs/product-description/product-description.component";
@@ -46,6 +47,11 @@ export const ROUTES : Routes = [
   {
     path: 'products',
     component: ProductsContainerComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
     pathMatch: 'full'
   },
   {

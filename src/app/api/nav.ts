@@ -12,6 +12,10 @@ export const nav_items: Item[] = [
   {
     name: "Blog",
     path: ""
+  },
+  {
+    name: "Contact",
+    path: "/contact"
   }
 ]
 
