@@ -25,3 +25,34 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+.contact-container form button {
+  height: 55px;
+  font-weight: 100;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contact-container form button:hover {
+  background-color: #3f51b5;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-container form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-container form {
+    width: 95%;
+  }
+
+  .contact-container form .form-line {
+    flex-direction: column;
+    min-height: 123px;
+  }
+}
