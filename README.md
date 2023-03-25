@@ -1,3 +1,6 @@
+Fait d'après le cours :
+https://www.udemy.com/course/devenir-un-expert-redoute-du-framework-javascript-angular/learn/lecture/31711302#overview
+
 # ShopApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
