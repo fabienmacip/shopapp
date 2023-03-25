@@ -296,7 +296,16 @@ form .form-line
 form .form-line input
 {
   font-size: 1.1rem;
-  height: 40px;
+  height: 50px;
+  padding: 0 10px;
+  border: none;
+  border-bottom: 0.1px solid #ccc;
+  outline-color: #3f51b5;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 form .btn
