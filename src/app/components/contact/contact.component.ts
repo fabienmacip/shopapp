@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
       this.firstname = this.fb.control("",[Validators.required, Validators.minLength(3)])
       this.email = this.fb.control("",[Validators.required, Validators.email])
       this.subject = this.fb.control("",[Validators.required, Validators.minLength(10)])
-      this.phone = this.fb.control("",[Validators.required])
+      this.phone = this.fb.control("",[Validators.required, Validators.minLength(5)])
       this.message = this.fb.control("",[Validators.required, Validators.minLength(20)])
 
       this.contactForm = this.fb.group({
