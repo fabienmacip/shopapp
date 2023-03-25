@@ -28,6 +28,7 @@ import { HomeSliderComponent } from './components/home-slider/home-slider.compon
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { ContactComponent } from './components/contact/contact.component';
     HomeSliderComponent,
     ProductsContainerComponent,
     PageTitleComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
